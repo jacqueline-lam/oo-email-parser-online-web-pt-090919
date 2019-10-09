@@ -19,8 +19,8 @@ class EmailAddressParser
     #   @email = @email.split(" ")
     # end
   
-    @email.split /\s|, / #split on white space or (|) ", "
-    
+    @email = @email.split /\s|, / #split on white space or (|) ", "
+    @email.uniq
     
     #return array of unique emails
   end
