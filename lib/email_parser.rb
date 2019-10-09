@@ -11,17 +11,11 @@ class EmailAddressParser
   end
   
   def parse
-    # parse CSV emails
-    # if @email.include?(",")
-    #   @email = @email.split(", ")
-    # # parse space delimited emails
-    # elsif @email.include?(" ")
-    #   @email = @email.split(" ")
-    # end
-  
+    # parse CSV emails or/and space delimited emails
     @email = @email.split /\s|, / #split on white space or (|) ", "
+    #return array of unique emails
     @email.uniq
     
-    #return array of unique emails
+
   end
 end
