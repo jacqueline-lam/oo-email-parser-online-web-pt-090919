@@ -4,7 +4,7 @@
 # or whitespace (' ').
 
 class EmailAddressParser
-  attr_accessor :email, :parse
+  # attr_accessor :email, :parse
   
   def initialize(email)
     @email = email
@@ -13,9 +13,7 @@ class EmailAddressParser
   def parse
     # parse CSV emails or/and space delimited emails
     @email = @email.split /\s|, / #split on white space or (|) ", "
-    #return array of unique emails
+    # return array of unique emails
     @email.uniq
-    
-
   end
 end
